@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan2Quote – Loxone Quoting Tool</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Plan2Quote</h1>
+    <p>Upload a floor‑plan PDF and generate an automated quote based on your Loxone standards.</p>
+  </header>
+  <main>
+    <div class="controls">
+      <input type="file" id="pdfFile" accept="application/pdf">
+      <label for="automationType">Automation:</label>
+      <select id="automationType" multiple size="5">
+        <option value="lighting" selected>Lighting</option>
+        <option value="shading">Shading</option>
+        <option value="climate">Climate control</option>
+        <option value="security">Security</option>
+        <option value="music">Music</option>
+      </select>
+      <button id="previewBtn">Generate Preview</button>
+    </div>
+    <div id="loading" style="display:none; margin-top:1rem;">Processing…</div>
+    <div id="preview" style="display:none; margin-top:1rem;"></div>
+    <button id="commitBtn" style="display:none; margin-top:1rem;">Commit to simPRO</button>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
